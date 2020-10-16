@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>HelloTomcat</display-name>
+  <welcome-file-list>
+    <welcome-file>myApp/html/introHTML.html</welcome-file>
+  </welcome-file-list>
+  <!-- we can give all servlets a parameter for the lifetime of the application -->
+  <context-param>
+  	<param-name>application</param-name>
+  	<param-value>application name is HelloTomcat</param-value>
+  </context-param>
+  <servlet>
+  	<servlet-name>indirect</servlet-name>
+  	<servlet-class>com.web.servlet.IndirectServlet</servlet-class>
+  	<!--  we can give the servlet configuration -->
+  	<init-param>
+  		<param-name>servlet</param-name>
+  		<param-value>indirect servlet parameter</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>indirect</servlet-name>
+  	<url-pattern>/redirect</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>indirect</servlet-name>
+  	<url-pattern>/forward</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>indirect</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/myApp/html/error.html</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.sql.SQLException</exception-type>
+  	<location>/myApp/html/error.html</location>
+  </error-page>
+  
+</web-app>

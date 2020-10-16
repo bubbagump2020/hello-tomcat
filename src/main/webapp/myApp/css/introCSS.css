@@ -1,0 +1,76 @@
+/*Tag selector*/
+body > table{
+    margin: auto;
+    font-family: cursive;
+}
+
+h1{
+    color : green;
+}
+
+.class1{
+    color: lightblue;
+}
+.class2{
+    color: lightgreen;
+}
+#id2{
+    color:lightcoral;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* table{
+    margin: auto;
+} */
+
+/*
+    Three types of styling
+        inline
+            <h1 style="color:red" />
+            use the style attribute to style
+                individual elements
+        internal
+            use a style block in the head of the html
+                to style the entire document.
+        external
+            use a css file to add styling to html.
+            use a link tag in the head of the document
+                to add the css file.
+        css syntax
+            selctor {
+                property: value;
+            }
+
+        selectors
+            tag selector
+            class selector
+
+        css specifity
+            tag selector
+            class selector
+            id selector
+            inline styling
+
+            !important
+                not recommended due to the overriding default
+                    behavior of css
+        css
+            cascading stylesheet
+        
+        css box model
+            margin
+                border
+                    padding
+                        content
+                    padding
+                border
+            margin
+
+        css combinators
+            child selector
+                parentSelector > childSelector{}
+            descendent selector
+                parentSelector childSelector{}
+            neighbor selector
+                selector1, selector2, selector... {}
+*/

@@ -1,0 +1,165 @@
+<!-- This is a comment in html-->
+
+<!-- 
+    what is html?
+        defines the structure for a web page.
+        the browser will interpret the html and display
+            it accordingly on the screen.
+        hypertext markup language
+        we will be using html5
+
+    in html5 we have tags
+        the tags are standardized by the w3c
+            world wide web consortium
+                opening tag <tagName>
+                closing tag </tagName>
+                self closing tag <tagName/> or just <tagName>
+            
+    A few a important tags in html that are needed by the browser
+            doctype will tell teh browser what type pof document it is
+            html tag is the root tag of the document
+            head tag provides metadat for the document
+            body tag provides the content for the document
+
+ -->
+ <!-- for the browser to know what type of document it is -->
+ <!DOCTYPE html>
+<html>
+ <!-- What the browser needs to know for the document -->
+ <head>
+     <title>Intro</title>
+     <!-- external styling -->
+     <!-- 
+        bootstrap is a css framework that provides templating
+            options and preformatted css with a grid system
+            for a responsive design.
+      -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> 
+     <!-- <link rel="stylesheet" href="../css/introCSS.css" type="text/css"> -->
+     <!-- internal styling -->
+     <!-- <style>
+         h1{
+             color : red;
+             font-family: cursive;
+         }
+     </style> -->
+ </head>
+ <!-- What will be displayed -->
+ <body>
+    <!-- heading tags, h1 is the biggest going down to 6 -->
+    <!-- inline styling -->
+    <h1 style="color:green; font-family: cursive;">This is the first heading tag with inline styling</h1>
+    <h1 class="class1">hey</h1>
+    <h2 id="id2">this is the second header with css id styling</h2>
+    <h3 class="class1">this is the third</h3>
+    <h4 class="class2">this is the fourth</h4>
+    <h5 class="class1">this is the fifth</h5>
+    <h6 class="class2">this is the sixth</h6>
+    <!-- paragraph -->
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+    <!-- 
+        inline and block elements
+            block elements allocate the width of the page for the content
+                examples: p, h1-6, div, etc...
+            inline elements allocate only enough space as is needed for the content
+                examples: span, textarea, b, i, etc...
+    -->
+
+    <span>This si a span, we can edit the content as needed for styling</span>
+    <b>This is a bold tag</b>
+    <br ><!-- This is a line break-->
+    <i>This is a italiczed tag</i>
+    <!-- tagName*number will auto generate that many tags for you -->
+
+    <!-- lists -->
+    <!-- bulleted list (unordered) -->
+    <ul title="this is a tooltip for the entire list"> 
+        This is the name of the list
+        <li title="This is a tooltip for the list item">first bullet</li>
+        <li>second bullet</li>
+        <li>third bullet</li>
+    </ul>
+    <ol>
+        the name of our lists
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+    </ol>
+    <dl>
+        the dictionary list
+        <dt>aardvark</dt>
+        <dd>An animal with more a's than k's</dd>
+    </dl>
+    <!-- 
+        attributes
+            a property that can change the appearance or behavior of an element.
+     -->
+     <!-- tables -->
+     <table class="table table-dark">
+         <thead>
+             <tr>
+                 <th>name</th>
+                 <th>age</th>
+                 <th>phone #</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Anthony</td>
+                 <td>44</td>
+                 <td>555-555-5555</td>
+             </tr>
+             <tr>
+                 <td>samantha</td>
+                 <td>32</td>
+                 <td>222-222-2222</td>
+             </tr>
+         </tbody>
+     </table>
+
+     <!-- forms -->
+     <!-- Action tells the browser where to send the form data
+            method tells the browser how to send it(http method)
+    -->
+     <form method="POST" action="some.url" enctype="multipart/form-data">
+         <!-- inputs are inline elements
+                we reference them by name on the server side to get their values
+            -->
+         <input type="text" class="form-control form-control-lg" placeholder="username" name="username"/>
+         <input type="password" class="form-control" placeholder="password" name="password" />
+         <input type="file" name="some file" />
+         <input type="date" name="date" />
+         <select name="favorite places">
+             <option value="null">Pick your favorite place</option>
+             <option value="tokyo">tokyo</option>
+         </select>
+         <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+     <!-- 
+         different types of attributes
+            local
+                attributes taht are only available to some elements
+                    action, method, src, href, etc...
+            global
+                attributes that all elements can use
+                    id, class, style, title, etc...
+      -->
+      <!-- Linking pages -->
+      <a href="https://www.google.com">click here for a search engine</a>
+      <img href src="../20190730_125434.jpg"/>
+      <!-- 
+          href ----------- > resource
+          src < ------------ resource
+       -->
+       <div>
+           <span>This is a span inside a div</span>
+           <a href="redirect">Login page</a> 
+       </div>
+       
+       <span>This is a span outside of a div</span>
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ </body>
+</html>
